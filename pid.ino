@@ -17,7 +17,7 @@ int incoming;
 float r1=20,t1;            
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2);
   ESP_BT.begin("ESP_SEXO"); 
   sensor.begin();
@@ -51,8 +51,7 @@ int decimales;
   //Serial2.write(t2); 
   //Serial2.write(decimales);
 
-  Serial.println(t1); 
-  //Serial.println(decimales);
+  Serial.write(t2); 
   
   delay(500);
 }
